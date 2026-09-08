@@ -20,7 +20,7 @@ import streamlit as st
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from rdkit import Chem, RDLogger
-from rdkit.Chem import Draw
+from rdkit.Chem import rdDepictor
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(REPO_ROOT, "src"))
@@ -79,6 +79,93 @@ def band_for(logs):
         if logs >= cutoff:
             return label, blurb
     return BANDS[-1][1], BANDS[-1][2]
+
+
+# Atom colours for the structure drawing. Carbon is left implicit, as is
+# conventional in a skeletal formula.
+ATOM_COLORS = {
+    "O": "#c0392b", "N": "#2a78d6", "S": "#b7950b", "P": "#d35400",
+    "F": "#16a085", "Cl": "#16a085", "Br": "#8e44ad", "I": "#6c3483",
+}
+
+
+def _bond_normal(p, q, scale):
+    """Unit normal to the p->q vector, scaled -- offsets parallel bond lines."""
+    dx, dy = q[0] - p[0], q[1] - p[1]
+    n = (dx * dx + dy * dy) ** 0.5 or 1.0
+    return -dy / n * scale, dx / n * scale
+
+
+def draw_molecule(mol, size=3.0):
+    """Render a skeletal formula with matplotlib.
+
+    rdkit.Chem.Draw links against X11 (libXrender), which is absent from the
+    deployment image, so the structure is drawn here from the 2D coordinates
+    rdDepictor produces -- that module has no such dependency.
+    """
+    mol = Chem.Mol(mol)
+    try:
+        # Kekulize so aromatic rings come back as explicit alternating bonds.
+        Chem.Kekulize(mol, clearAromaticFlags=True)
+    except Exception:
+        pass
+    rdDepictor.Compute2DCoords(mol)
+    conf = mol.GetConformer()
+    pos = {a.GetIdx(): (conf.GetAtomPosition(a.GetIdx()).x,
+                        conf.GetAtomPosition(a.GetIdx()).y)
+           for a in mol.GetAtoms()}
+
+    fig, ax = plt.subplots(figsize=(size, size))
+    fig.patch.set_facecolor(SURFACE)
+    ax.set_facecolor(SURFACE)
+
+    labelled = {i for i, a in enumerate(mol.GetAtoms()) if a.GetSymbol() != "C"}
+
+    for bond in mol.GetBonds():
+        i, j = bond.GetBeginAtomIdx(), bond.GetEndAtomIdx()
+        p, q = pos[i], pos[j]
+        # Stop bonds short of atom labels so the text is not struck through.
+        dx, dy = q[0] - p[0], q[1] - p[1]
+        n = (dx * dx + dy * dy) ** 0.5 or 1.0
+        ux, uy = dx / n, dy / n
+        p = (p[0] + ux * (0.20 if i in labelled else 0.0),
+             p[1] + uy * (0.20 if i in labelled else 0.0))
+        q = (q[0] - ux * (0.20 if j in labelled else 0.0),
+             q[1] - uy * (0.20 if j in labelled else 0.0))
+
+        order = bond.GetBondTypeAsDouble()
+        if order == 2:
+            offsets, width = (1, -1), 1.4
+        elif order == 3:
+            offsets, width = (1, 0, -1), 1.3
+        else:
+            offsets, width = (0,), 1.6
+        ox, oy = _bond_normal(p, q, 0.055 if order == 2 else 0.075)
+        for s_ in offsets:
+            ax.plot([p[0] + s_ * ox, q[0] + s_ * ox],
+                    [p[1] + s_ * oy, q[1] + s_ * oy],
+                    color=INK, linewidth=width, solid_capstyle="round", zorder=2)
+
+    for idx in labelled:
+        atom = mol.GetAtomWithIdx(idx)
+        sym = atom.GetSymbol()
+        h = atom.GetTotalNumHs()
+        label = sym + ("H" if h == 1 else f"H{h}" if h > 1 else "")
+        x, y = pos[idx]
+        ax.text(x, y, label, ha="center", va="center", fontsize=11,
+                color=ATOM_COLORS.get(sym, INK), zorder=3,
+                bbox=dict(boxstyle="round,pad=0.12", facecolor=SURFACE,
+                          edgecolor="none"))
+
+    xs = [c[0] for c in pos.values()]
+    ys = [c[1] for c in pos.values()]
+    pad = 0.6
+    ax.set_xlim(min(xs) - pad, max(xs) + pad)
+    ax.set_ylim(min(ys) - pad, max(ys) + pad)
+    ax.set_aspect("equal")
+    ax.axis("off")
+    fig.tight_layout(pad=0.1)
+    return fig
 
 
 def distribution_chart(y, value):
@@ -140,7 +227,9 @@ with single:
 
             left, right = st.columns([1, 1.3])
             with left:
-                st.image(Draw.MolToImage(mol, size=(280, 280)))
+                structure = draw_molecule(mol)
+                st.pyplot(structure)
+                plt.close(structure)
             with right:
                 st.metric("Predicted solubility", f"{pred:.2f} log mol/L")
                 st.metric("Roughly", f"{mg_per_l:,.0f} mg/L" if mg_per_l >= 1
@@ -153,7 +242,9 @@ with single:
                 f"so read this as roughly {lo:.2f} to {hi:.2f}."
             )
 
-            st.pyplot(distribution_chart(load_training_targets(), pred))
+            dist = distribution_chart(load_training_targets(), pred)
+            st.pyplot(dist)
+            plt.close(dist)
 
             with st.expander("Properties this molecule has"):
                 keys = ["MolWt", "MolLogP", "TPSA", "NumHDonors", "NumHAcceptors",
