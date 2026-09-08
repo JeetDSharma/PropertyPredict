@@ -22,12 +22,13 @@ import matplotlib.pyplot as plt
 from rdkit import Chem, RDLogger
 from rdkit.Chem import Draw
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(REPO_ROOT, "src"))
 from pipeline import build_datasets, engineer, plain_name, rdkit_descriptors  # noqa: E402
 
 RDLogger.DisableLog("rdApp.*")
 
-MODEL_PATH = "models/best_model.joblib"
+MODEL_PATH = os.path.join(REPO_ROOT, "models", "best_model.joblib")
 SURFACE, INK, INK_MUTED, GRID, BLUE = "#fcfcfb", "#0b0b0b", "#52514e", "#e3e2de", "#2a78d6"
 
 EXAMPLES = {

@@ -10,6 +10,7 @@ Nothing here touches a test fold.
 
 from __future__ import annotations
 
+import os
 import re
 
 import numpy as np
@@ -29,7 +30,10 @@ from xgboost import XGBRegressor
 RDLogger.DisableLog("rdApp.*")
 
 RANDOM_STATE = 42
-DATA_PATH = "data/esol.csv"
+# Anchored to the repo root rather than the working directory, so the app
+# loads the same data no matter where the process was launched from.
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(REPO_ROOT, "data", "esol.csv")
 TARGET = "measured log solubility in mols per litre"
 
 # The six descriptors shipped with the dataset. These define the "no feature

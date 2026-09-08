@@ -1,0 +1,15 @@
+# The matplotlib charts in app.py hardcode a light palette (SURFACE/INK/GRID),
+# so pin the app to a light theme that matches them. Without this, a visitor
+# whose browser reports dark mode gets light charts on a dark page.
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#fcfcfb"
+secondaryBackgroundColor = "#f2f1ed"
+textColor = "#0b0b0b"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
