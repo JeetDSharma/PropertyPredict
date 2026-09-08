@@ -3,6 +3,9 @@
 **Predicting a continuous chemical property — aqueous solubility — from molecular
 structure alone, with an end-to-end scikit-learn pipeline.**
 
+[![Try the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://propertypredict.streamlit.app/)
+&nbsp;**[propertypredict.streamlit.app](https://propertypredict.streamlit.app/)** — paste a molecule, no install needed.
+
 Give it a molecule as a SMILES string. It returns how well that molecule
 dissolves in water, in log mol/L, with an honest error bar.
 
@@ -32,6 +35,9 @@ Full write-up with all four charts: **[results.md](results.md)**
 
 ## Run it
 
+The app is deployed at **<https://propertypredict.streamlit.app/>** — nothing to
+install. To run it locally, or to retrain the model yourself:
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
@@ -46,7 +52,7 @@ streamlit run app.py                 # the UI
 ## The UI
 
 A single-screen Streamlit app aimed at someone who knows chemistry but not
-machine learning. Paste a structure (or pick an example), get:
+machine learning — [live here](https://propertypredict.streamlit.app/). Paste a structure (or pick an example), get:
 
 - the prediction in **log mol/L and in mg/L**, plus a plain-English band
   ("soluble", "practically insoluble")
