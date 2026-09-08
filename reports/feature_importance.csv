@@ -1,0 +1,222 @@
+feature,importance,label
+MolLogP,0.7686564367427351,Greasiness (oil/water preference)
+BertzCT,0.0817921682043836,Structural complexity
+MolWt,0.06515932466991099,Molecular weight
+PEOE_VSA6,0.0632046642185073,"Surface area carrying charge, band 6 (PEOE_VSA6)"
+eng_logp_per_heavy_atom,0.03743045591207951,Greasiness per atom (engineered)
+eng_polarity_density,0.031693543571928114,Polar surface per unit mass (engineered)
+Chi2v,0.030252889829741964,"Branching pattern, order 2 (Chi2v)"
+Chi1v,0.020121458857653426,"Branching pattern, order 1 (Chi1v)"
+MinPartialCharge,0.017417387650509576,Strongest negative atomic charge
+BCUT2D_MWLOW,0.015777771558119193,Heaviest/lightest atom contribution (BCUT2D_MWLOW)
+MaxPartialCharge,0.013831774685398358,Strongest positive atomic charge
+qed,0.013581539297049416,Drug-likeness score
+Chi0n,0.01202783704357425,"Branching pattern, order 0 (Chi0n)"
+SlogP_VSA2,0.011682383736992315,"Surface area by greasiness, band 2 (SlogP_VSA2)"
+SMR_VSA10,0.011445709645061659,"Surface area by polarizability, band 10 (SMR_VSA10)"
+FpDensityMorgan1,0.010393234844421131,FpDensityMorgan1
+AvgIpc,0.009710356149464135,AvgIpc
+Chi3n,0.009300713606876215,"Branching pattern, order 3 (Chi3n)"
+HallKierAlpha,0.007428843734673399,HallKierAlpha
+Kappa2,0.007255320112081956,Molecular shape index 2 (Kappa2)
+VSA_EState2,0.007181962814951719,"Electronic state by surface area, band 2 (VSA_EState2)"
+PEOE_VSA7,0.0069018823717240845,"Surface area carrying charge, band 7 (PEOE_VSA7)"
+MaxAbsEStateIndex,0.006568525969342605,MaxAbsEStateIndex
+SlogP_VSA10,0.006510966754347587,"Surface area by greasiness, band 10 (SlogP_VSA10)"
+BCUT2D_MRLOW,0.00623165954285978,Most/least polarizable atom contribution (BCUT2D_MRLOW)
+BCUT2D_MWHI,0.006022639432048708,Heaviest/lightest atom contribution (BCUT2D_MWHI)
+SlogP_VSA4,0.005371819709090841,"Surface area by greasiness, band 4 (SlogP_VSA4)"
+fr_Ar_NH,0.003829222913304791,Count of ar nh groups (fr_Ar_NH)
+BCUT2D_LOGPHI,0.003185011982125991,Greasiest/least greasy atom contribution (BCUT2D_LOGPHI)
+SMR_VSA7,0.003161963100246314,"Surface area by polarizability, band 7 (SMR_VSA7)"
+FpDensityMorgan3,0.002969678184328064,FpDensityMorgan3
+TPSA,0.002842438624073562,Polar surface area
+BalabanJ,0.0026973985260072683,Molecular branching index
+SMR_VSA1,0.002544063277628088,"Surface area by polarizability, band 1 (SMR_VSA1)"
+BCUT2D_MRHI,0.0025028643240485593,Most/least polarizable atom contribution (BCUT2D_MRHI)
+NumHeteroatoms,0.0024815914343987886,Number of heteroatoms (NumHeteroatoms)
+EState_VSA3,0.0022934652826565173,"Surface area by electronic state, band 3 (EState_VSA3)"
+SlogP_VSA3,0.0022548559027014024,"Surface area by greasiness, band 3 (SlogP_VSA3)"
+EState_VSA7,0.0021974318204421106,"Surface area by electronic state, band 7 (EState_VSA7)"
+MinEStateIndex,0.00215755355284795,MinEStateIndex
+NumHAcceptors,0.0020865740028763067,Hydrogen-bond acceptors
+VSA_EState9,0.0018763557998602385,"Electronic state by surface area, band 9 (VSA_EState9)"
+FpDensityMorgan2,0.001868845862169253,FpDensityMorgan2
+VSA_EState4,0.001809508641376407,"Electronic state by surface area, band 4 (VSA_EState4)"
+PEOE_VSA12,0.0017934628982827403,"Surface area carrying charge, band 12 (PEOE_VSA12)"
+PEOE_VSA8,0.0017661835227885492,"Surface area carrying charge, band 8 (PEOE_VSA8)"
+SMR_VSA5,0.0016401855641088002,"Surface area by polarizability, band 5 (SMR_VSA5)"
+fr_bicyclic,0.0015905217117921657,Count of bicyclic groups (fr_bicyclic)
+fr_NH1,0.0015868938650838381,Count of nh1 groups (fr_NH1)
+SPS,0.0015832526340332676,SPS
+EState_VSA10,0.0015095716802657887,"Surface area by electronic state, band 10 (EState_VSA10)"
+fr_pyridine,0.0015004869042436475,Count of pyridine groups (fr_pyridine)
+MinAbsEStateIndex,0.0014844463845586464,MinAbsEStateIndex
+FractionCSP3,0.0012548506420844686,Fraction of saturated carbons
+fr_aryl_methyl,0.0011827232390802678,Count of aryl methyl groups (fr_aryl_methyl)
+EState_VSA9,0.0011705105183305252,"Surface area by electronic state, band 9 (EState_VSA9)"
+VSA_EState6,0.0011439550740729354,"Electronic state by surface area, band 6 (VSA_EState6)"
+fr_Al_OH,0.0011221185550582867,Count of al oh groups (fr_Al_OH)
+PEOE_VSA4,0.0011143779522406305,"Surface area carrying charge, band 4 (PEOE_VSA4)"
+Chi4n,0.0010997949863746914,"Branching pattern, order 4 (Chi4n)"
+BCUT2D_LOGPLOW,0.0010543173181605692,Greasiest/least greasy atom contribution (BCUT2D_LOGPLOW)
+Kappa3,0.0010512004202750179,Molecular shape index 3 (Kappa3)
+PEOE_VSA14,0.0010369451563369346,"Surface area carrying charge, band 14 (PEOE_VSA14)"
+BCUT2D_CHGHI,0.000957029526446238,Most/least charged atom contribution (BCUT2D_CHGHI)
+VSA_EState3,0.0009403227700503792,"Electronic state by surface area, band 3 (VSA_EState3)"
+Chi3v,0.0008842063156237368,"Branching pattern, order 3 (Chi3v)"
+eng_mass_per_heavy_atom,0.0008595097096233229,Average atom weight (engineered)
+EState_VSA5,0.000835808591015672,"Surface area by electronic state, band 5 (EState_VSA5)"
+SlogP_VSA1,0.0008051366121246285,"Surface area by greasiness, band 1 (SlogP_VSA1)"
+VSA_EState8,0.0007995812426805094,"Electronic state by surface area, band 8 (VSA_EState8)"
+PEOE_VSA10,0.0007943747718986937,"Surface area carrying charge, band 10 (PEOE_VSA10)"
+SMR_VSA6,0.0007759345174258625,"Surface area by polarizability, band 6 (SMR_VSA6)"
+PEOE_VSA2,0.0007576807535990682,"Surface area carrying charge, band 2 (PEOE_VSA2)"
+fr_C_S,0.0007375045389350632,Count of c s groups (fr_C_S)
+NHOHCount,0.0006673569892994324,NHOHCount
+NumValenceElectrons,0.0006655669546626398,Valence electron count
+SlogP_VSA5,0.0006491767294413231,"Surface area by greasiness, band 5 (SlogP_VSA5)"
+EState_VSA8,0.000633004441976359,"Surface area by electronic state, band 8 (EState_VSA8)"
+RingCount,0.0006280293292266935,Number of rings
+EState_VSA6,0.0005990248505295037,"Surface area by electronic state, band 6 (EState_VSA6)"
+PEOE_VSA1,0.0005833683766761366,"Surface area carrying charge, band 1 (PEOE_VSA1)"
+eng_aromatic_fraction,0.0004964989607330805,Share of rings that are aromatic (engineered)
+VSA_EState7,0.000471144604010716,"Electronic state by surface area, band 7 (VSA_EState7)"
+fr_Ar_OH,0.0004538036159120251,Count of ar oh groups (fr_Ar_OH)
+NumAromaticHeterocycles,0.0004265646964902902,Number of aromaticheterocycles (NumAromaticHeterocycles)
+PEOE_VSA13,0.0003443081863164509,"Surface area carrying charge, band 13 (PEOE_VSA13)"
+fr_NH0,0.0003247289845764812,Count of nh0 groups (fr_NH0)
+fr_Ar_N,0.00032429300488063807,Count of ar n groups (fr_Ar_N)
+NumAmideBonds,0.00029939362688496273,Number of amidebonds (NumAmideBonds)
+NumAromaticRings,0.0002865699431270219,Aromatic rings
+EState_VSA1,0.0002758228619372494,"Surface area by electronic state, band 1 (EState_VSA1)"
+NumHeterocycles,0.00027191688038751943,Number of heterocycles (NumHeterocycles)
+fr_nitro,0.0002579495584659552,Count of nitro groups (fr_nitro)
+fr_unbrch_alkane,0.00025171597009014944,Count of unbrch alkane groups (fr_unbrch_alkane)
+PEOE_VSA3,0.0002199440418340126,"Surface area carrying charge, band 3 (PEOE_VSA3)"
+SMR_VSA3,0.0001982696345599777,"Surface area by polarizability, band 3 (SMR_VSA3)"
+fr_sulfide,0.00018311621112085952,Count of sulfide groups (fr_sulfide)
+SlogP_VSA12,0.00015289909022331294,"Surface area by greasiness, band 12 (SlogP_VSA12)"
+EState_VSA2,0.000141000359621537,"Surface area by electronic state, band 2 (EState_VSA2)"
+BCUT2D_CHGLO,0.0001307480479197576,Most/least charged atom contribution (BCUT2D_CHGLO)
+SMR_VSA9,0.0001230025450429206,"Surface area by polarizability, band 9 (SMR_VSA9)"
+Chi2n,0.0001226978313042881,"Branching pattern, order 2 (Chi2n)"
+fr_ester,0.00012015956016143912,Count of ester groups (fr_ester)
+PEOE_VSA9,0.00010927123974245677,"Surface area carrying charge, band 9 (PEOE_VSA9)"
+NumAtomStereoCenters,0.00010354847969011428,Number of atomstereocenters (NumAtomStereoCenters)
+NumRotatableBonds,9.769347649204896e-05,Flexible bonds
+SlogP_VSA7,8.248784753065674e-05,"Surface area by greasiness, band 7 (SlogP_VSA7)"
+SMR_VSA2,8.193490603909837e-05,"Surface area by polarizability, band 2 (SMR_VSA2)"
+fr_imidazole,7.808957478276479e-05,Count of imidazole groups (fr_imidazole)
+fr_ketone,6.719942727250849e-05,Count of ketone groups (fr_ketone)
+fr_Ndealkylation1,5.5595265572256906e-05,Count of ndealkylation1 groups (fr_Ndealkylation1)
+SMR_VSA4,4.811921584164214e-05,"Surface area by polarizability, band 4 (SMR_VSA4)"
+fr_NH2,4.712842447914145e-05,Count of nh2 groups (fr_NH2)
+fr_alkyl_halide,4.435373408903764e-05,Count of alkyl halide groups (fr_alkyl_halide)
+NumSaturatedRings,3.528968203361682e-05,Number of saturatedrings (NumSaturatedRings)
+fr_aniline,3.281368824131992e-05,Count of aniline groups (fr_aniline)
+NumAromaticCarbocycles,3.110775474275851e-05,Number of aromaticcarbocycles (NumAromaticCarbocycles)
+fr_methoxy,2.876104368294996e-05,Count of methoxy groups (fr_methoxy)
+NumAliphaticCarbocycles,2.3922762930488342e-05,Number of aliphaticcarbocycles (NumAliphaticCarbocycles)
+SlogP_VSA6,2.3067118930364395e-05,"Surface area by greasiness, band 6 (SlogP_VSA6)"
+fr_allylic_oxid,1.4468071734654591e-05,Count of allylic oxid groups (fr_allylic_oxid)
+NumSaturatedHeterocycles,1.1188685699954344e-05,Number of saturatedheterocycles (NumSaturatedHeterocycles)
+NumAliphaticRings,1.0017111836768678e-05,Number of aliphaticrings (NumAliphaticRings)
+fr_ether,9.014582885913402e-06,Count of ether groups (fr_ether)
+fr_hdrzine,6.123146734040574e-06,Count of hdrzine groups (fr_hdrzine)
+fr_urea,5.0996977837058924e-06,Count of urea groups (fr_urea)
+fr_tetrazole,0.0,Count of tetrazole groups (fr_tetrazole)
+fr_hdrzone,0.0,Count of hdrzone groups (fr_hdrzone)
+fr_thiazole,0.0,Count of thiazole groups (fr_thiazole)
+fr_thiocyan,0.0,Count of thiocyan groups (fr_thiocyan)
+fr_thiophene,0.0,Count of thiophene groups (fr_thiophene)
+fr_guanido,0.0,Count of guanido groups (fr_guanido)
+fr_furan,0.0,Count of furan groups (fr_furan)
+fr_benzene,0.0,Count of benzene groups (fr_benzene)
+fr_piperdine,0.0,Count of piperdine groups (fr_piperdine)
+NumRadicalElectrons,0.0,Number of radicalelectrons (NumRadicalElectrons)
+ExactMolWt,0.0,Exact molecular weight
+fr_epoxide,0.0,Count of epoxide groups (fr_epoxide)
+fr_dihydropyridine,0.0,Count of dihydropyridine groups (fr_dihydropyridine)
+HeavyAtomMolWt,0.0,Molecular weight (excluding hydrogens)
+eng_hbond_total,0.0,Total hydrogen-bond sites (engineered)
+fr_diazo,0.0,Count of diazo groups (fr_diazo)
+MinAbsPartialCharge,0.0,MinAbsPartialCharge
+fr_term_acetylene,0.0,Count of term acetylene groups (fr_term_acetylene)
+fr_isocyan,0.0,Count of isocyan groups (fr_isocyan)
+fr_isothiocyan,0.0,Count of isothiocyan groups (fr_isothiocyan)
+fr_sulfone,0.0,Count of sulfone groups (fr_sulfone)
+fr_phos_ester,0.0,Count of phos ester groups (fr_phos_ester)
+fr_phos_acid,0.0,Count of phos acid groups (fr_phos_acid)
+fr_phenol_noOrthoHbond,0.0,Count of phenol noorthohbond groups (fr_phenol_noOrthoHbond)
+fr_phenol,0.0,Count of phenol groups (fr_phenol)
+fr_piperzine,0.0,Count of piperzine groups (fr_piperzine)
+fr_oxime,0.0,Count of oxime groups (fr_oxime)
+fr_oxazole,0.0,Count of oxazole groups (fr_oxazole)
+fr_nitroso,0.0,Count of nitroso groups (fr_nitroso)
+fr_nitro_arom,0.0,Count of nitro arom groups (fr_nitro_arom)
+fr_prisulfonamd,0.0,Count of prisulfonamd groups (fr_prisulfonamd)
+fr_nitrile,0.0,Count of nitrile groups (fr_nitrile)
+MaxAbsPartialCharge,0.0,MaxAbsPartialCharge
+fr_morpholine,0.0,Count of morpholine groups (fr_morpholine)
+fr_quatN,0.0,Count of quatn groups (fr_quatN)
+fr_sulfonamd,0.0,Count of sulfonamd groups (fr_sulfonamd)
+fr_lactone,0.0,Count of lactone groups (fr_lactone)
+fr_lactam,0.0,Count of lactam groups (fr_lactam)
+fr_benzodiazepine,0.0,Count of benzodiazepine groups (fr_benzodiazepine)
+SlogP_VSA9,0.0,"Surface area by greasiness, band 9 (SlogP_VSA9)"
+fr_barbitur,0.0,Count of barbitur groups (fr_barbitur)
+NumSaturatedCarbocycles,0.0,Number of saturatedcarbocycles (NumSaturatedCarbocycles)
+fr_Al_OH_noTert,0.0,Count of al oh notert groups (fr_Al_OH_noTert)
+Chi1n,0.0,"Branching pattern, order 1 (Chi1n)"
+fr_azo,0.0,Count of azo groups (fr_azo)
+MolMR,0.0,Molar refractivity (polarizability)
+Chi4v,0.0,"Branching pattern, order 4 (Chi4v)"
+Phi,0.0,Phi
+NumUnspecifiedAtomStereoCenters,0.0,Number of unspecifiedatomstereocenters (NumUnspecifiedAtomStereoCenters)
+NumSpiroAtoms,0.0,Number of spiroatoms (NumSpiroAtoms)
+Kappa1,0.0,Molecular shape index 1 (Kappa1)
+Chi1,0.0,"Branching pattern, order 1 (Chi1)"
+NumHDonors,0.0,Hydrogen-bond donors
+LabuteASA,0.0,Molecular surface area
+MaxEStateIndex,0.0,MaxEStateIndex
+NOCount,0.0,NOCount
+HeavyAtomCount,0.0,Number of heavy atoms
+VSA_EState10,0.0,"Electronic state by surface area, band 10 (VSA_EState10)"
+SMR_VSA8,0.0,"Surface area by polarizability, band 8 (SMR_VSA8)"
+EState_VSA11,0.0,"Surface area by electronic state, band 11 (EState_VSA11)"
+fr_Ar_COO,0.0,Count of ar coo groups (fr_Ar_COO)
+fr_Al_COO,0.0,Count of al coo groups (fr_Al_COO)
+fr_COO,0.0,Count of coo groups (fr_COO)
+fr_Imine,0.0,Count of imine groups (fr_Imine)
+fr_azide,0.0,Count of azide groups (fr_azide)
+fr_amidine,0.0,Count of amidine groups (fr_amidine)
+fr_amide,0.0,Count of amide groups (fr_amide)
+fr_alkyl_carbamate,0.0,Count of alkyl carbamate groups (fr_alkyl_carbamate)
+fr_aldehyde,0.0,Count of aldehyde groups (fr_aldehyde)
+fr_SH,0.0,Count of sh groups (fr_SH)
+fr_N_O,0.0,Count of n o groups (fr_N_O)
+Chi0,0.0,"Branching pattern, order 0 (Chi0)"
+fr_Nhpyrrole,0.0,Count of nhpyrrole groups (fr_Nhpyrrole)
+fr_Ndealkylation2,0.0,Count of ndealkylation2 groups (fr_Ndealkylation2)
+fr_C_O_noCOO,0.0,Count of c o nocoo groups (fr_C_O_noCOO)
+Chi0v,0.0,"Branching pattern, order 0 (Chi0v)"
+fr_COO2,0.0,Count of coo2 groups (fr_COO2)
+fr_HOCCN,0.0,Count of hoccn groups (fr_HOCCN)
+fr_priamide,-5.229346712134486e-06,Count of priamide groups (fr_priamide)
+PEOE_VSA5,-8.819795838914681e-06,"Surface area carrying charge, band 5 (PEOE_VSA5)"
+NumBridgeheadAtoms,-1.0547665990761069e-05,Number of bridgeheadatoms (NumBridgeheadAtoms)
+fr_imide,-2.985415169044269e-05,Count of imide groups (fr_imide)
+fr_ArN,-3.179479842964739e-05,Count of arn groups (fr_ArN)
+fr_nitro_arom_nonortho,-3.966328576655353e-05,Count of nitro arom nonortho groups (fr_nitro_arom_nonortho)
+NumAliphaticHeterocycles,-4.887486719328483e-05,Number of aliphaticheterocycles (NumAliphaticHeterocycles)
+fr_ketone_Topliss,-5.075460454825543e-05,Count of ketone topliss groups (fr_ketone_Topliss)
+fr_halogen,-6.291568645545363e-05,Count of halogen groups (fr_halogen)
+fr_para_hydroxylation,-9.322959357518367e-05,Count of para hydroxylation groups (fr_para_hydroxylation)
+PEOE_VSA11,-0.00014259323689473467,"Surface area carrying charge, band 11 (PEOE_VSA11)"
+fr_C_O,-0.00015903574481990649,Count of c o groups (fr_C_O)
+SlogP_VSA11,-0.00017411712827124503,"Surface area by greasiness, band 11 (SlogP_VSA11)"
+VSA_EState1,-0.00020111307962004778,"Electronic state by surface area, band 1 (VSA_EState1)"
+EState_VSA4,-0.0002129707731565711,"Surface area by electronic state, band 4 (EState_VSA4)"
+SlogP_VSA8,-0.00042171777480576095,"Surface area by greasiness, band 8 (SlogP_VSA8)"
+VSA_EState5,-0.0008656196454948616,"Electronic state by surface area, band 5 (VSA_EState5)"
